@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI";
+    background: #B4CDE6;
+}
+
+/*-------------Estilos header-------------*/
+
+header{
+    width: 100%;
+}
+
+.flex-header{
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.img-icon{
+    width: 90px;
+    height: 90px;
+}
+
+.title{
+    width: 100%;
+}
+
+/*-------------Estilos body-------------*/
+
+.container-flex{
+    width: 100%;
+    display: flex;
+}
+
+.container-form{
+    width: 25%;
+    margin: 0;
+    text-align: center;
+}
+
+.form{
+    width: 100%;
+    margin: 25% 0 0 0;
+    text-align: center;
+}
+
+.form p{
+    font-size: 20px;
+}
+
+.title-tarea{
+    width: 80%;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+}
+
+.description-tarea{
+    width: 80%;
+    height: 120px;
+    padding: 10px;
+    margin: 15px 0;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+}
+
+.btn-crear{
+    width: 150px;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    transition: all .1s;
+}
+
+.btn-crear:active{
+    transform: scale(.9);
+}
+
+.container-tareas{
+    width: 75%;
+    text-align: center;
+}
+
+.container-tareas h1{
+    margin: 0;
+}
