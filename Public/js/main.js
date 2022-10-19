@@ -1,9 +1,7 @@
 const btn_crear = document.querySelector('#btn_crear')
-const btn_borarr = document.querySelector('#btn_borrar')
 const container_notas = document.querySelector('.container-tareas')
 
-
-btn_crear.addEventListener('click', ()=>{
+btn_crear.addEventListener('click', async ()=>{
 
     //tomar los valores del formulario
     const form = document.forms['form']
@@ -20,8 +18,9 @@ btn_crear.addEventListener('click', ()=>{
     const btn_borrar = document.createElement('button')
 
     //le damos valores al boton de borrar
+    div.className = 'nota'
     btn_borrar.append(document.createTextNode('X'))
-    btn_borrar.setAttribute('id', 'btn_borrar')
+    btn_borrar.id = 'Borrar'
 
     //introducimos la informacion del formulario a los elementos
 
@@ -35,13 +34,21 @@ btn_crear.addEventListener('click', ()=>{
     div.appendChild(description)
 
     //le ponemos una clase al div para darle estilos
-
     div.classList.add('nota')
-
+    
+    //agregamos todo al div donde se va a mostrar en el html
     container_notas.appendChild(div)
 })
 
+const borrar = document.querySelector('#Borrar')
 
-btn_borarr.addEventListener('click', ()=>{
-    div_nota.remove()
+borrar.addEventListener('click', (e)=>{
+    const notas = document.querySelector('.nota')
+    container_notas.removeChild(notas)
 })
+
+
+
+
+
+
