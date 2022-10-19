@@ -1,7 +1,9 @@
 const btn_crear = document.querySelector('#btn_crear')
-const container_notas = document.querySelector('.container-tareas')
+const container_notas = document.querySelector('#lista-tareas')
+const titulo = document.querySelector('#titulo')
+const description = document.querySelector('#descripcion')
 
-btn_crear.addEventListener('click', async ()=>{
+btn_crear.addEventListener('click', ()=>{
 
     //tomar los valores del formulario
     const form = document.forms['form']
@@ -9,7 +11,7 @@ btn_crear.addEventListener('click', async ()=>{
     for (const valor of form) {
         valores.push(valor.value)
     }
-    
+
     //creamos los elementos
 
     const div = document.createElement('div')
@@ -18,9 +20,7 @@ btn_crear.addEventListener('click', async ()=>{
     const btn_borrar = document.createElement('button')
 
     //le damos valores al boton de borrar
-    div.className = 'nota'
     btn_borrar.append(document.createTextNode('X'))
-    btn_borrar.id = 'Borrar'
 
     //introducimos la informacion del formulario a los elementos
 
@@ -38,14 +38,20 @@ btn_crear.addEventListener('click', async ()=>{
     
     //agregamos todo al div donde se va a mostrar en el html
     container_notas.appendChild(div)
+
+    //le quitamos el valor a los inputs cuando acabe de crear los elementos
+
+    titulo.value = ''
+    description.Text = ''
+
+    //le damos la funcion de borrar al boton correspondiente
+    
+    btn_borrar.addEventListener('click', (e)=>{
+        container_notas.removeChild(e.target.parentElement)
+    })
 })
 
-const borrar = document.querySelector('#Borrar')
 
-borrar.addEventListener('click', (e)=>{
-    const notas = document.querySelector('.nota')
-    container_notas.removeChild(notas)
-})
 
 
 
