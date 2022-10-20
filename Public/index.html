@@ -11,14 +11,14 @@
     <header>
         <div class="flex-header">
             <img src="./assets/icon.png" alt="Imagen" class="img-icon">
-            <h1 class="title">Creador de notas</h1>
+            <h1 class="title">Creador de tareas</h1>
         </div>
     </header>
     <body>
         <div class="container-flex">
             <div class="container-form">
                 <form class="form" id="form">
-                    <p>Crea tus notas</p>
+                    <p>Crea tus tareas</p>
                     <input type="text" placeholder="Titulo" class="title-tarea" id="titulo">
                     <textarea type="text" placeholder="Descripcion" class="description-tarea" id="descripcion"></textarea>
                 </form>
@@ -26,8 +26,8 @@
             </div>
             <div class="container-tareas">
                 <h1>Tus tareas</h1>
-                <ul id="lista-tareas"> 
-
+                <ul id="lista-tareas" class="lista"> 
+                    <p class="anuncio-tarea">No hay tareas pendientes</p>
                 </ul>
             </div>
         </div>
