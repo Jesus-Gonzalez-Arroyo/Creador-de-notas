@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Segoe UI";
-    background: #B4CDE6;
+    background: #42855B;
 }
 
 /*-------------Estilos header-------------*/
@@ -83,12 +83,30 @@ header{
 }
 
 .container-tareas{
-    width: 75%;
+    width: 65%;
+    height: 73vh;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black;
     text-align: center;
+    overflow-y: scroll;
+    background: #90B77D;
 }
 
 .container-tareas h1{
     margin: 0;
+}
+
+.container-tareas::-webkit-scrollbar{
+    width: 12px;
+    border-radius: 0 10px 10px 0;
+}
+
+.container-tareas::-webkit-scrollbar-thumb{
+    width: 2px;
+    border-radius: 15px;
+    background: #fff;
 }
 
 /* ----------estilos nota----------- */
@@ -100,6 +118,7 @@ header{
     padding: 1px 0 0 0;
     border-radius: 10px;
     box-shadow: 5px 5px 10px #000;
+    list-style: none;
     background: #CDFCF6;
 }
 
@@ -118,3 +137,12 @@ header{
     background: red;
 }
 
+.lista{
+    padding: 0;
+}
+
+.anuncio-tarea{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
