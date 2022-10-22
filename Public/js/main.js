@@ -54,13 +54,18 @@ btn_crear.addEventListener('click', ()=>{
 
     //le damos la funcion de borrar al boton correspondiente
     btn_borrar.addEventListener('click', (e)=>{
-        container_notas.removeChild(e.target.parentElement)
 
-        const tareas = document.querySelectorAll('.nota')
+        setTimeout(() => {
+            container_notas.removeChild(e.target.parentElement)
 
-        if(tareas.length === 0){
-            Anuncio.style.display = 'block'
-        }
+            const tareas = document.querySelectorAll('.nota')
+
+            if(tareas.length === 0){
+                Anuncio.style.display = 'block'
+            }
+        }, 1900);
+
+        e.target.parentElement.classList.add('MoverNota')
     })
 
 })
