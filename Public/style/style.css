@@ -20,8 +20,8 @@ header{
 }
 
 .img-icon{
-    width: 90px;
-    height: 90px;
+    width: 65px;
+    height: 65px;
 }
 
 .title{
@@ -43,12 +43,12 @@ header{
 
 .form{
     width: 100%;
-    margin: 25% 0 0 0;
+    margin: 22% 0 0 0;
     text-align: center;
 }
 
 .form p{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .title-tarea{
@@ -56,6 +56,7 @@ header{
     padding: 10px;
     border: 0;
     border-radius: 10px;
+    font-size: 15px;
     outline: none;
 }
 
@@ -66,20 +67,38 @@ header{
     margin: 15px 0;
     border: 0;
     border-radius: 10px;
+    font-size: 15px;
     outline: none;
     resize: none;
 }
 
 .btn-crear{
-    width: 150px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
     border: 0;
-    border-radius: 10px;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
     transition: all .1s;
+}
+
+.btn-crear:hover{
+    background: #90B77D;    
+    animation: MoveCircular 10s;
 }
 
 .btn-crear:active{
     transform: scale(.9);
+}
+
+@keyframes MoveCircular {
+    10%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
 }
 
 .container-tareas{
@@ -88,7 +107,6 @@ header{
     margin: auto;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px black;
     text-align: center;
     overflow-y: scroll;
     background: #90B77D;
@@ -122,6 +140,24 @@ header{
     background: #CDFCF6;
 }
 
+.MoverNota{
+    animation: NotaMove 2s;
+}
+
+@keyframes NotaMove {
+    0%{
+        opacity: 100;
+    }
+
+    50%{
+        opacity: 50;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
 .nota h2{
     margin: 10px 0;
     font-size: 35px;
@@ -133,6 +169,8 @@ header{
     margin: 10px 0 0 90%;
     border: 0;
     border-radius: 50%;
+    cursor: pointer;
+    font-size: 10px;
     color: #fff;
     background: red;
 }
@@ -142,7 +180,55 @@ header{
 }
 
 .anuncio-tarea{
-    margin: 0;
+    margin: 29vh auto;
     padding: 0;
     font-size: 20px;
+}
+
+.btn-crear-movile{
+    margin: 0 20px 0 0;
+    display: none;
+}
+
+.styleformMobile{
+    width: 70%;
+    height: 70%;
+    margin: 50% 50%;
+    border-radius: 20px;
+    transform: translate(-50% , -50%);
+    box-shadow: 5px 5px 15px #222;
+    position: absolute;
+    text-align: center;
+    display: block;
+    background: #90B77D;
+}
+
+/*------------Version mobile------------------*/
+
+@media screen and (max-width: 600px){
+
+    .btn-crear-movile{
+        display: block;
+    }
+    .flex-header{
+        width: 100%;
+        margin: 10px 0 10px 0;
+        padding: 0;
+    }
+
+    .container-form{
+        display: none;
+    }
+
+    .styleformMobile{
+        width: 90%;
+        height: 70%;
+    }
+
+    .container-tareas{
+        width: 80%;
+        height: 80vh;
+        max-height: 80vh;
+        overflow-y: scroll;
+    }
 }
