@@ -3,6 +3,7 @@ const container_notas = document.querySelector('#lista-tareas')
 const titulo = document.querySelector('#titulo')
 const description = document.querySelector('#descripcion')
 const Anuncio = document.querySelector('.anuncio-tarea')
+const btn_crear_mobile = document.querySelector('#btn_movile')
 
 btn_crear.addEventListener('click', ()=>{
 
@@ -68,8 +69,21 @@ btn_crear.addEventListener('click', ()=>{
         e.target.parentElement.classList.add('MoverNota')
     })
 
+
+    //seleccionamos el form para quitarlo cuando se cree una tarea nueva en la version mobile
+    const containerform = document.querySelector('.styleformMobile')
+    containerform.style.display = 'none'
+    containerform.classList.remove('styleformMobile')
+    containerform.classList.add('container-form')
 })
 
+//seleccionamos el boton nuevo en version mobile y le damos propiedades para que aparezca el form para crear una tarea
+btn_crear_mobile.addEventListener('click', ()=>{
+    let form = document.querySelector('.container-form')
+    form.classList.remove('container-form')
+    form.classList.add('styleformMobile')
+    form.style.display = 'block'
+})
 
 
 
