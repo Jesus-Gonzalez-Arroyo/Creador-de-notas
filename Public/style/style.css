@@ -102,9 +102,8 @@ header{
 }
 
 .container-tareas{
-    width: 65%;
-    height: 73vh;
-    margin: auto;
+    width: 100%;
+    margin: 8% auto;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
@@ -193,14 +192,37 @@ header{
 .styleformMobile{
     width: 70%;
     height: 70%;
-    margin: 50% 50%;
+    margin: 80% 50%;
     border-radius: 20px;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     box-shadow: 5px 5px 15px #222;
     position: absolute;
     text-align: center;
     display: block;
     background: #90B77D;
+}
+
+/* -------------Version tablet------------- */
+
+@media screen and (max-width: 900px){
+
+    .flex-header{
+        width: 100%;
+    }
+
+    .container-flex{
+        margin: 7% 0;
+        align-items: center;
+    }
+
+    .container-form{
+        width: 40%;
+    }
+
+    .container-tareas{
+        width: 60%;
+        margin: 0 3% 0 3%;
+    }
 }
 
 /*------------Version mobile------------------*/
@@ -222,13 +244,25 @@ header{
 
     .styleformMobile{
         width: 90%;
-        height: 70%;
+        height: 450px;
     }
 
     .container-tareas{
         width: 80%;
-        height: 80vh;
+        height: 600px;
         max-height: 80vh;
         overflow-y: scroll;
+    }
+
+    .nota{
+        width: 90%;
+    }
+
+    .nota h2{
+        font-size: 25px;
+    }
+
+    .nota button{
+        margin: 3px 0 0 87%;
     }
 }
