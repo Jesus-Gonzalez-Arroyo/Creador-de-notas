@@ -12,8 +12,8 @@
         <div class="flex-header">
             <img src="./assets/icon.png" alt="Imagen" class="img-icon">
             <h1 class="title">Creador de tareas</h1>
-            <div>
-                <button class="btn-crear btn-crear-movile" id="btn_movile">+</button>
+            <div class="container-btn-mobile">
+                <button class="btn-crear-movile" id="btn_movile">+</button>
             </div>
         </div>
     </header>
@@ -25,7 +25,10 @@
                     <input type="text" placeholder="Titulo" class="title-tarea" id="titulo">
                     <textarea type="text" placeholder="Descripcion" class="description-tarea" id="descripcion"></textarea>
                 </form>
-                <button id="btn_crear" class="btn-crear">+</button>
+                <div class="flex-button">
+                    <button id="btn_crear" class="btn_form">+</button>
+                    <button id="btn_close" class="btn_form">x</button>
+                </div>
             </div>
             <div class="container-tareas">
                 <h1>Tus tareas</h1>
