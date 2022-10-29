@@ -72,8 +72,8 @@ header{
     resize: none;
 }
 
-.btn_form{
-    width: 100%;
+.btn_form_crear{
+    width: 50px;
     height: 50px;
     margin: 10px 0 0 5px;
     padding: 10px;
@@ -84,13 +84,27 @@ header{
     transition: all .1s;
 }
 
-.btn_form:hover{
+.btn_form_crear:hover{
     background: #90B77D;    
     animation: MoveCircular 10s;
 }
 
-.btn_form:active{
-    transform: scale(.9);
+.btn_form_close{
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 0 5px;
+    padding: 10px;
+    border: 0;
+    display: none;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.btn_form_close:hover{
+    background: #90B77D;    
+    animation: MoveCircular 10s;
 }
 
 @keyframes MoveCircular {
@@ -129,7 +143,7 @@ header{
 }
 
 .flex-button{
-    width: 35%;
+    width: 55px;
     margin: auto;
     display: flex;
 }
@@ -244,12 +258,19 @@ header{
         margin: 0 3% 0 3%;
     }
 
+    #btn_close{
+        display: block;
+    }
 
 }
 
 /*------------Version mobile------------------*/
 
 @media screen and (max-width: 600px){
+
+    .title{
+        font-size: 25px;
+    }
 
     .btn-crear-movile{
         display: block;
@@ -289,5 +310,13 @@ header{
 
     .nota button{
         margin: 9px 0 0 83%;
+    }
+
+    .flex-button{
+        width: 100px;
+    }
+
+    .btn_form_close{
+        display: block;
     }
 }
