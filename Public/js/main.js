@@ -4,6 +4,7 @@ const titulo = document.querySelector('#titulo')
 const description = document.querySelector('#descripcion')
 const Anuncio = document.querySelector('.anuncio-tarea')
 const btn_crear_mobile = document.querySelector('#btn_movile')
+const btn_cerrar_mobile = document.querySelector('#btn_close')
 
 btn_crear.addEventListener('click', ()=>{
 
@@ -39,8 +40,8 @@ btn_crear.addEventListener('click', ()=>{
     container_notas.appendChild(li)
 
     //le quitamos el valor a los inputs cuando acabe de crear los elementos
+    description.value = ""
     titulo.value = ''
-    description.Text = ''
 
     //creamos un condicional para ver si se pone o no el texto del anuncio
 
@@ -79,15 +80,16 @@ btn_crear.addEventListener('click', ()=>{
 
 //seleccionamos el boton nuevo en version mobile y le damos propiedades para que aparezca el form para crear una tarea
 btn_crear_mobile.addEventListener('click', ()=>{
-    let form = document.querySelector('.container-form')
+    const form = document.querySelector('.container-form')    
     form.classList.remove('container-form')
     form.classList.add('styleformMobile')
     form.style.display = 'block'
 })
 
-
-
-
-
-
-
+//seleccion del boton para cerra la ventana del form
+btn_cerrar_mobile.addEventListener('click', ()=>{
+    const form_Mobile = document.querySelector('.styleformMobile')
+    form_Mobile.style.display = 'none'
+    form_Mobile.classList.remove('styleformMobile')
+    form_Mobile.classList.add('container-form')
+})
